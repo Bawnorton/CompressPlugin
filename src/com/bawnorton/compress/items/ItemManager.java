@@ -37,7 +37,7 @@ public class ItemManager {
             {Material.OAK_LOG, "Compressed Oak Log" , "Oak Log", null},
             {Material.RED_SAND, "Compressed Red Sand" , "Red Sand", null},
             {Material.SAND, "Compressed Sand" , "Sand", null},
-            {Material.SANDSTONE, "Compressed Sandstone" , "Sandston3e", null},
+            {Material.SANDSTONE, "Compressed Sandstone" , "Sandstone", null},
             {Material.SOUL_SAND, "Compressed Soul Sand" , "Soul Sand", null},
             {Material.SOUL_SOIL, "Compressed Soul Soil" , "Soul Soil", null},
             {Material.SPRUCE_LOG, "Compressed Spruce Log" , "Spruce Log", null},
@@ -62,10 +62,10 @@ public class ItemManager {
             meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
             item.setItemMeta(meta);
             compressedBlocks[i][3] = item;
-            ShapelessRecipe compress = new ShapelessRecipe(NamespacedKey.minecraft("compressed_"+((String)compressedBlocks[i][2]).toLowerCase()), item);
+            ShapelessRecipe compress = new ShapelessRecipe(NamespacedKey.minecraft("compressed_"+((String)compressedBlocks[i][2]).toLowerCase().replace(" ", "")), item);
             compress.addIngredient(9, (Material) compressedBlocks[i][0]);
             getServer().addRecipe(compress);
-            ShapelessRecipe uncompress = new ShapelessRecipe(NamespacedKey.minecraft("uncompressed_"+((String)compressedBlocks[i][2]).toLowerCase()), new ItemStack((Material) compressedBlocks[i][0], 9));
+            ShapelessRecipe uncompress = new ShapelessRecipe(NamespacedKey.minecraft("uncompressed_"+((String)compressedBlocks[i][2]).toLowerCase().replace(" ", "")), new ItemStack((Material) compressedBlocks[i][0], 9));
             uncompress.addIngredient((Material) compressedBlocks[i][0]);
             getServer().addRecipe(uncompress);
         }
