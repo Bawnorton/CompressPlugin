@@ -24,12 +24,11 @@ public class CompressEvents implements Listener {
 
     @EventHandler
     public void onPlace(BlockPlaceEvent event) {
-        for(Object[] block: ItemManager.compressedBlocks)
-            if (((String)block[1]).contains(event.getItemInHand().getItemMeta().getDisplayName())) {
-                event.setCancelled(true);
-                Player player = event.getPlayer();
-                player.sendMessage(ChatColor.RED + "You cannot place this block");
-            }
+        if ((event.getItemInHand().getItemMeta().getDisplayName().contains("Compressed"))) {
+            event.setCancelled(true);
+            Player player = event.getPlayer();
+            player.sendMessage(ChatColor.RED + "You cannot place this block");
+        }
     }
 
     @EventHandler
