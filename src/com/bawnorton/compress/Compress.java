@@ -11,12 +11,12 @@ public class Compress extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         new CompressEvents(this);
-        getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[Compress]: Plugin Enabled");
+        getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[Compress] Plugin Enabled");
         ItemManager.init();
     }
 
     @Override
     public void onDisable() {
-        getServer().getConsoleSender().sendMessage(ChatColor.RED + "[Compress]: Plugin Disabled");
+        getServer().getConsoleSender().sendMessage(ChatColor.RED + "[Compress] Plugin Disabled");
     }
 }
