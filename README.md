@@ -1,7 +1,7 @@
 # CompressPlugin
 Fill a 3x3 crafting grid with your desired block.
 
-Currently supports:
+###### Currently supports:
 - Andesite
 - Cobblestone
 - Diorite
@@ -11,7 +11,7 @@ Currently supports:
 - Sand
 - Sandstone
 - Stone
-New:
+###### New:
 - Acacia Log
 - Basalt
 - Birch Log
