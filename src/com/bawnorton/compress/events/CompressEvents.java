@@ -81,7 +81,7 @@ public class CompressEvents implements Listener {
                     event.getInventory().setResult(new ItemStack(Material.OAK_PLANKS, 4));
                     break;
                 case SPRUCE_LOG:
-                    event.getInventory().setResult(new ItemStack(Material.SPRUCE_LOG, 4));
+                    event.getInventory().setResult(new ItemStack(Material.SPRUCE_PLANKS, 4));
                     break;
                 case STONE:
                     event.getInventory().setResult(new ItemStack(Material.STONE_BUTTON));
